@@ -19,7 +19,7 @@ public class DubboConsumer {
      * @param args
      */
     public static void main(String[] args) {
-        testDubboDemo();
+        testDubboDemo(); 
     }
     
     public static void testDubboDemo() {
