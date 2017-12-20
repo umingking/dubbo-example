@@ -1,5 +1,7 @@
 package com.example.crawler;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Arrays;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
@@ -36,6 +38,12 @@ public class DubboConsumer {
         ref.setMethods(Arrays.asList(new MethodConfig[]{mc}));
         
         System.out.println(ref.get().testDemo("你好，dubbo框架"));
+        
+        try {
+            System.out.println(InetAddress.getLocalHost().getHostAddress());
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
     }
 
 }
